@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6534c6e-811c-4dfe-93e4-a479293cb56e" name="Default" comment="" />
+    <list default="true" id="b6534c6e-811c-4dfe-93e4-a479293cb56e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/eosAnalytics.go" beforeDir="false" afterPath="$PROJECT_DIR$/eosAnalytics.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,10 +16,10 @@
       <file leaf-file-name="eosAnalytics.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/eosAnalytics.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="297">
+              <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
               <folding>
-                <element signature="e#14#87#0" expanded="true" />
+                <element signature="e#14#123#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -27,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/testnets/jungle3.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="24" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="9" selection-end-column="24" />
+              <caret line="9" column="24" selection-start-line="3" selection-start-column="6" selection-end-line="9" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -35,6 +37,9 @@
     </leaf>
   </component>
   <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -55,6 +60,7 @@
     <option name="width" value="1560" />
     <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -128,10 +134,10 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47103825" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5081967" />
+      <window_info anchor="bottom" id="Version Control" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32896176" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -149,6 +155,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/testnets/arrowhead.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -160,16 +171,16 @@
     <entry file="file://$PROJECT_DIR$/testnets/jungle3.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="9" selection-end-column="24" />
+          <caret line="9" column="24" selection-start-line="3" selection-start-column="6" selection-end-line="9" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eosAnalytics.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="297">
+          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
           <folding>
-            <element signature="e#14#87#0" expanded="true" />
+            <element signature="e#14#123#0" expanded="true" />
           </folding>
         </state>
       </provider>
