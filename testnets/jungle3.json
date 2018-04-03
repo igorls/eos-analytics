@@ -1,0 +1,211 @@
+{
+  "blockProducerList": [
+    {
+      "bp_name": "volcano",
+      "organisation": "CryptoLions.io",
+      "location": "Ukraine, Kyiv",
+      "node_addr": "jungle.cryptolions.io",
+      "port_http": "8900",
+      "port_ssl": "",
+      "port_p2p": "9899"
+    },
+    {
+      "bp_name": "lion",
+      "organisation": "CryptoLions.io",
+      "location": "Ukraine, Kyiv",
+      "node_addr": "94.154.212.15",
+      "port_http": "8898",
+      "port_ssl": "",
+      "port_p2p": "9886"
+    },
+    {
+      "bp_name": "tiger",
+      "organisation": "CryptoLions.io",
+      "location": "Ukraine, Lviv",
+      "node_addr": "193.93.219.219",
+      "port_http": "8889",
+      "port_ssl": "",
+      "port_p2p": "9877"
+    },
+    {
+      "bp_name": "mosquito",
+      "organisation": "IberEOS",
+      "location": "Spain",
+      "node_addr": "mosquito.prometeos.io",
+      "port_http": "8889",
+      "port_ssl": "",
+      "port_p2p": "9877"
+    },
+    {
+      "bp_name": "bat",
+      "organisation": "EOSio.se",
+      "location": "Sweeden",
+      "node_addr": "ctestnet.eosio.se",
+      "port_http": "8062",
+      "port_ssl": "",
+      "port_p2p": "6602"
+    },
+    {
+      "bp_name": "kangaroo",
+      "organisation": "EOSphere.io",
+      "location": "Australia",
+      "node_addr": "jungle.eosphere.io",
+      "port_http": "8888",
+      "port_ssl": "",
+      "port_p2p": "9876"
+    },
+    {
+      "bp_name": "panther",
+      "organisation": "EOS42.io",
+      "location": "London",
+      "node_addr": "bp4-d3.eos42.io",
+      "port_http": "8888",
+      "port_ssl": "",
+      "port_p2p": "9876"
+    },
+    {
+      "bp_name": "beaver",
+      "organisation": "EOS Calgary",
+      "location": "Canada, Calgary",
+      "node_addr": "54.200.153.106",
+      "port_http": "8888",
+      "port_ssl": "",
+      "port_p2p": "9876"
+    },
+    {
+      "bp_name": "wolf",
+      "organisation": "EOSbrazil.com",
+      "location": "Brazil",
+      "node_addr": "eosbrazil.com",
+      "port_http": "8884",
+      "port_ssl": "",
+      "port_p2p": "9873"
+    },
+    {
+      "bp_name": "langurs",
+      "organisation": "EOSgreen.io",
+      "location": "UK",
+      "node_addr": "eosgreen.uk.to",
+      "port_http": "8888",
+      "port_ssl": "",
+      "port_p2p": "9876"
+    },
+    {
+      "bp_name": "galapago2",
+      "organisation": "bitcoineos.fun",
+      "location": "Germany",
+      "node_addr": "95.216.20.181",
+      "port_http": "7010",
+      "port_ssl": "",
+      "port_p2p": "7015"
+    },
+    {
+      "bp_name": "whale",
+      "organisation": "EOS.Cafe",
+      "location": "Canada",
+      "node_addr": "eoscalgary.com",
+      "port_http": "8888",
+      "port_ssl": "",
+      "port_p2p": "9876"
+    },
+    {
+      "bp_name": "fox",
+      "organisation": "EOS Rio",
+      "location": "Brazil, Rio de Janeiro",
+      "node_addr": "eosrio.entropia.in",
+      "port_http": "8889",
+      "port_ssl": "",
+      "port_p2p": "9876"
+    },
+    {
+      "bp_name": "elephant",
+      "organisation": "Blockpro.one",
+      "location": "USA",
+      "node_addr": "18.188.52.250",
+      "port_http": "8877",
+      "port_ssl": "",
+      "port_p2p": "9898"
+    },
+    {
+      "bp_name": "wombat",
+      "organisation": "pearls.capital",
+      "location": "Russia, Moscow",
+      "node_addr": "pearls.capital",
+      "port_http": "8889",
+      "port_ssl": "",
+      "port_p2p": "9877"
+    },
+    {
+      "bp_name": "sloth",
+      "organisation": "EOS Botetourt",
+      "location": "Singapore",
+      "node_addr": "188.166.226.110",
+      "port_http": "8888",
+      "port_ssl": "",
+      "port_p2p": "9876"
+    },
+    {
+      "bp_name": "gorilla",
+      "organisation": "EOSnottingham.io",
+      "location": "UK",
+      "node_addr": "v3gorilla.jungle.eosnottingham.io",
+      "port_http": "8427",
+      "port_ssl": "",
+      "port_p2p": "9927"
+    },
+    {
+      "bp_name": "mowgli",
+      "organisation": "roelandp.nl/eos",
+      "location": "Germany",
+      "node_addr": "mowgli.jungle3.eos.roelandp.nl",
+      "port_http": "8765",
+      "port_ssl": "",
+      "port_p2p": "9876"
+    },
+    {
+      "bp_name": "mpenjati",
+      "organisation": "EOS.IO Africa",
+      "location": "Africa",
+      "node_addr": "mpenjati.eosio.africa",
+      "port_http": "8851",
+      "port_ssl": "",
+      "port_p2p": "9821"
+    },
+    {
+      "bp_name": "wolverine",
+      "organisation": "BP Node",
+      "location": "Canada, Monreal",
+      "node_addr": "35.182.46.236",
+      "port_http": "9879",
+      "port_ssl": "",
+      "port_p2p": "6879"
+    },
+    {
+      "bp_name": "cheetah",
+      "organisation": "EOS Amsterdam",
+      "location": "Amsterdam",
+      "node_addr": "cheetah.jungle3.bptn.eosamsterdam.net",
+      "port_http": "8888",
+      "port_ssl": "",
+      "port_p2p": "9876"
+    },
+    {
+      "bp_name": "tokki",
+      "organisation": "www.eosnodeone.io",
+      "location": "Seoul",
+      "node_addr": "bpseoul.eosnodeone.io",
+      "port_http": "8888",
+      "port_ssl": "",
+      "port_p2p": "9876"
+    },
+    {
+      "bp_name": "rhino",
+      "organisation": "HKEOS",
+      "location": "Hong Kong",
+      "node_addr": "220.241.204.237",
+      "port_http": "8888",
+      "port_ssl": "",
+      "port_p2p": "9876"
+    }
+  ]
+}
