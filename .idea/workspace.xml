@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6534c6e-811c-4dfe-93e4-a479293cb56e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/eosAnalytics.go" beforeDir="false" afterPath="$PROJECT_DIR$/eosAnalytics.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="eosAnalytics.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="eosAnalytics.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eosAnalytics.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
@@ -21,6 +21,15 @@
               <folding>
                 <element signature="e#14#123#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
         </entry>
@@ -46,6 +55,7 @@
         <option value="$PROJECT_DIR$/arrowhead.json" />
         <option value="$PROJECT_DIR$/jungle3.json" />
         <option value="$PROJECT_DIR$/eosAnalytics.go" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -129,12 +139,12 @@
     <frame x="1007" y="0" width="1560" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5081967" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5081967" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" weight="0.32896176" />
@@ -182,6 +192,13 @@
           <folding>
             <element signature="e#14#123#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
         </state>
       </provider>
     </entry>
