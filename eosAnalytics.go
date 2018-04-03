@@ -23,7 +23,7 @@ type NodeList struct {
 }
 
 type Node struct {
-	Name        string `json:"np_name"`
+	Name        string `json:"bp_name"`
 	Org         string `json:"organisation"`
 	Location    string `json:"location"`
 	NodeAddress string `json:"node_addr"`
