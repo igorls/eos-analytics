@@ -13,6 +13,7 @@ import (
 	"sort"
 	"log"
 	"net/http/httptrace"
+	"net"
 )
 
 type GetInfoResponse struct {
@@ -37,6 +38,7 @@ type Node struct {
 	PortSSL     string `json:"port_ssl"`
 	PortP2P     string `json:"port_p2p"`
 	Coordinates string
+	NodeIP      string
 	Responses   []float64
 	AVR         float64
 }
@@ -57,12 +59,12 @@ func getJson(url string, target interface{}) (int64, error) {
 	return t, json.NewDecoder(r.Body).Decode(target)
 }
 
-func trace(url string) interface{} {
+func trace(url string) string {
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
-	var ip interface{}
+	var ip net.IP
 	trace := &httptrace.ClientTrace{
 		DNSDone: func(dnsInfo httptrace.DNSDoneInfo) {
 			ip = dnsInfo.Addrs[0].IP
@@ -73,9 +75,10 @@ func trace(url string) interface{} {
 	}
 	req = req.WithContext(httptrace.WithClientTrace(req.Context(), trace))
 	if _, err := http.DefaultTransport.RoundTrip(req); err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return "_"
 	}
-	return ip
+	return ip.String()
 }
 
 func findPublicIP(server string) string {
@@ -103,15 +106,41 @@ func avg(input []float64) float64 {
 	return total / float64(len(input))
 }
 
+func measureConn(host, port string) {
+	conn, err := net.Dial("tcp", host+":"+port)
+	if err != nil {
+		log.Println(err)
+	} else {
+		defer conn.Close()
+		conn.Write([]byte("GET / HTTP/1.0\r\n\r\n"))
+
+		start := time.Now()
+		oneByte := make([]byte, 1)
+		_, err = conn.Read(oneByte)
+		if err != nil {
+			log.Println(err)
+		} else {
+			log.Println("First byte:", time.Since(start))
+
+			_, err = ioutil.ReadAll(conn)
+			if err != nil {
+				log.Println(err)
+			} else {
+				log.Println("Everything:", time.Since(start))
+			}
+		}
+	}
+}
+
 func main() {
 	fmt.Println("EOS-Analytics")
 
-	filepath := "nodes.json"
-	jsonFile, err := os.Open(filepath)
+	filePath := "nodes.json"
+	jsonFile, err := os.Open(filePath)
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println("Successfully Opened " + filepath)
+	fmt.Println("Successfully Opened \"" + filePath + "\"")
 	defer jsonFile.Close()
 	byteValue, _ := ioutil.ReadAll(jsonFile)
 	var nodeList NodeList
@@ -121,8 +150,8 @@ func main() {
 	externalIP := findPublicIP("http://myexternalip.com/raw")
 	fmt.Println("Firing requests from:", externalIP)
 
-	externalIP2 := findPublicIP("https://ipv4.icanhazip.com/")
-	fmt.Println("Firing requests from:", externalIP2)
+	//externalIP2 := findPublicIP("https://ipv4.icanhazip.com/")
+	//fmt.Println("Firing requests from:", externalIP2)
 
 	fmt.Println(len(nodeList.Nodes), "nodes on list")
 
@@ -130,13 +159,24 @@ func main() {
 		nodeList.Nodes[index].Responses = []float64{}
 	}
 
-	cycles := 1
-
+	cycles := 2
 	for i := 0; i < cycles; i++ {
-		for _, element := range nodeList.Nodes {
+		for index, element := range nodeList.Nodes {
 			nodeURL := "http://" + element.NodeAddress + ":" + element.PortHTTP + "/v1/chain/get_info"
-			remoteIP := trace(nodeURL)
-			fmt.Println("Remote IP:",remoteIP)
+			measureConn(element.NodeAddress, element.PortHTTP)
+			if element.NodeIP == "" {
+				fmt.Println("Requesting:", nodeURL)
+				remoteIP := trace(nodeURL)
+				if len(remoteIP) > 6 {
+					nodeList.Nodes[index].NodeIP = remoteIP
+				}
+				fmt.Println("Remote IP:", remoteIP)
+			} else {
+				newNodeUrl := "http://" + element.NodeIP + ":" + element.PortHTTP + "/v1/chain/get_info"
+				fmt.Println("Requesting:", newNodeUrl)
+				trace(newNodeUrl)
+			}
+
 			//data := new(GetInfoResponse)
 			//responseTime, err := getJson(nodeURL, &data)
 			//if err != nil {
@@ -176,9 +216,13 @@ func main() {
 	fmt.Println("Fastest nodes for config.ini")
 	fmt.Println("----------------------------")
 
-	output = output[0:6]
-	for _, element := range output {
-		fmt.Println("p2p-peer-address = " + element.NodeAddress + ":" + element.PortP2P)
+	if len(output) > 0 {
+		output = output[0:6]
+		for _, element := range output {
+			fmt.Println("p2p-peer-address = " + element.NodeAddress + ":" + element.PortP2P)
+		}
+	} else {
+		fmt.Println("No results...")
 	}
 
 }
